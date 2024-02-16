@@ -51,7 +51,7 @@ def send_one_request(image_path):
         else:
             wrong_predictions +=1
 
-num_max_workers = 8
+num_max_workers = 100
 image_path_list = []
 test_start_time = time.time()
 
