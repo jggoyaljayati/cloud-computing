@@ -58,7 +58,7 @@ test_start_time = time.time()
 for i, name in enumerate(os.listdir(image_folder)):
     if i == num_request:
         break
-    image_path_list.append(image_folder + "/" + name)
+    image_path_list.append(image_folder + name)
 
 with ThreadPoolExecutor(max_workers = num_max_workers) as executor:
     executor.map(send_one_request, image_path_list)
